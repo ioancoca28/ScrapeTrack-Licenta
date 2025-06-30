@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to right, #2D3748, #374151),
+              url('https://www.transparenttextures.com/patterns/inspiration-geometry.png');
+  position: relative;
+  background-blend-mode: overlay;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  width: 400px;
+  margin-bottom: 60px;
+}
+
+.form-control {
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border: 2px solid #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.form-control::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #6c757d;
+}
+
+.form-control:hover {
+  border: 2px solid #000;
+  transition: border 0.2s ease-in-out;
+}
+
+.input-group-text {
+  background-color: white;
+  border-radius: 25px 0 0 25px;
+  padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+}
+
+.input-group .form-control {
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-box .input-group {
+  padding-bottom: 20px;
+}
+
+.btn-dark {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dark:hover {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+
+.btn-dark:active {
+  transform: scale(0.95);
+}
+
+.signup-link {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.toast-message {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  animation: slideDownFade 0.5s ease-out;
+}
+
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.toast-icon {
+  color: #f87171;
+  font-size: 20px;
+}
+.toast-message .toast-icon {
+  margin-right: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: white;
+}

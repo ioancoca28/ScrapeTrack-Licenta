@@ -1,0 +1,51 @@
+.btn-navbar {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 650;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #00d4ff, #007bff);
+}
+.btn-navbar:hover {
+  border-color: #00d4ff;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand span {
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(90deg, #00d4ff, #007bff);
+  position: relative;
+  top: -2px;
+}
+
+.spider-icon {
+  color: #00d4ff;
+}
+@media (min-width: 1200px) {
+  .btn-container {
+    margin-right: -200px;
+  }
+  .navbar-brand {
+  margin-left: -220px;
+}
+}
+@media (max-width: 1199px) {
+  .btn-container {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .btn-container {
+    gap: 5px;
+    margin-right: 5px;
+  }
+}

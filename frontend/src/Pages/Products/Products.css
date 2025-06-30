@@ -1,0 +1,378 @@
+.products-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: linear-gradient(to right, #2D3748, #374151),
+              url('https://www.transparenttextures.com/patterns/inspiration-geometry.png');
+  background-blend-mode: overlay;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.search-container {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 40px;
+  font-size: 16px;
+  border: 2px solid #2D3748;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.3s;
+  background-color: white;
+  color: #2D3748;
+}
+
+.search-wrapper .search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color: #888;
+}
+
+.table-container {
+  max-width: 1750px;
+  margin: 0 auto;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #222;
+}
+
+.product-table {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  background-color: transparent;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  table-layout: fixed;
+}
+
+.product-table thead {
+  position: sticky;
+  top: 0;
+  background: #222222;
+  z-index: 10;
+}
+
+.product-table th {
+  background: #222222;
+  color: #D1D5DB;
+  font-size: 16px;
+  padding: 12px;
+  text-align: left;
+}
+
+.product-table tbody {
+  display: block ;
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.product-table tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.product-table td {
+  color: #D1D5DB;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+  background-color: #2D2D2D;
+  line-height: 1.3;
+}
+
+.product-table tbody tr:hover td {
+  transform: scale(1.01);
+}
+
+.product-table a {
+  color: #D1D5DB;
+  transition: color 0.3s ease-in-out;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: left;
+  margin: 40px 0 10px 80px;
+  color: #D1D5DB;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-text {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #00d4ff, #007bff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 0.6s ease-in-out, floatUp 3s ease-in-out infinite;
+  letter-spacing: 0.5px;
+}
+
+.product-table th:nth-child(1),
+.product-table td:nth-child(1) {
+  width: 20%;
+}
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+  width: 50%;
+}
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+  width: 6%;
+}
+
+.product-table th:nth-child(4),
+.product-table td:nth-child(4) {
+  width: 5%;
+}
+.product-table th:nth-child(5),
+.product-table td:nth-child(5) {
+  width: 5%;
+}
+
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-table tbody::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.product-table tbody::-webkit-scrollbar-track {
+  background: #222;
+}
+.loading-message {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 65px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.bouncing-dots {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -7px;
+  position: relative;
+  top: 8px;
+}
+
+.bouncing-dots span {
+  width: 7px;
+  height: 7px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+.bouncing-dots span:nth-child(1) {
+  animation-delay: 0s;
+}
+.bouncing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bouncing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.no-results-message {
+  color: #D1D5DB;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.no-results-message h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.no-results-message p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.info-icon-btn {
+  background-color: #2d2d2d;
+  border: none;
+  color: #D1D5DB;
+  padding: 6px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.info-icon-btn:hover {
+  background-color: #505050;
+  color: #ffffff;
+  transform: scale(1.2);
+  animation: pulse-animation 1s infinite;
+}
+
+
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #1f1f1f;
+  color: #D1D5DB;
+  padding: 30px;
+  border-radius: 12px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  animation: fadeIn 0.4s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.close-modal-btn {
+  background-color: #444;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.close-modal-btn:hover {
+  background-color: #666;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.toast-message {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  animation: slideDownFade 0.5s ease-out;
+  max-width: 90%;
+}
+
+.toast-icon {
+  color: #f87171;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+  transition: color 0.2s ease;
+}
+
+
+.close-btn:hover {
+  color: white;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
